@@ -2,11 +2,13 @@
 //  Document.m
 //  umscriptapp
 //
-//  Created by Andreas Fink on 19/05/14.
+//  Created by Andreas Fink on 18.05.14.
 //  Copyright (c) 2014 SMSRelay AG. All rights reserved.
 //
 
 #import "Document.h"
+
+#import "umscript/umscript.h"
 
 @implementation Document
 
@@ -54,6 +56,35 @@
     NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
     @throw exception;
     return YES;
+}
+
+- (IBAction)runButtonPressed:(id)sender
+{
+    if(theScript == NULL)
+    {
+        theScript = [[UMScriptDocument alloc]init];
+    }
+    theScript.sourceCode = inputField.stringValue;
+    UMEnvironment *env = [[UMEnvironment alloc]init];
+    UMDiscreteValue *result = [theScript runScriptWithEnvironment:env];
+    NSString *rs = [result stringValue];
+    if(rs==NULL)
+    {
+        rs = @"<NULL>";
+    }
+    resultField.stringValue = rs;
+    runButton.title = @"DONE";
+}
+
+- (IBAction)compileButtonPressed:(id)sender
+{
+    if(theScript == NULL)
+    {
+        theScript = [[UMScriptDocument alloc]init];
+    }
+
+    theScript.sourceCode = inputField.stringValue;
+    resultField.stringValue = theScript.sourceWithoutComment;
 }
 
 @end
