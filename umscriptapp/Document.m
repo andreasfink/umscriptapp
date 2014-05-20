@@ -7,8 +7,11 @@
 //
 
 #import "Document.h"
-
+#include <unistd.h>
+#include <stdio.h>
 #import "umscript/umscript.h"
+
+#import "umscript/UMScriptDocument.h"
 
 @implementation Document
 
@@ -82,9 +85,10 @@
     {
         theScript = [[UMScriptDocument alloc]init];
     }
-
     theScript.sourceCode = inputField.stringValue;
-    resultField.stringValue = theScript.sourceWithoutComment;
+    NSString *result = [theScript compileSource];
+    
+    outputField.stringValue =  result;
 }
 
 @end
