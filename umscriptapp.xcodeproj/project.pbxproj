@@ -19,8 +19,8 @@
 		A6835C6819297C2E0090FC94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6835C4419297C2E0090FC94 /* Cocoa.framework */; };
 		A6835C7019297C2E0090FC94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6835C6E19297C2E0090FC94 /* InfoPlist.strings */; };
 		A6835C7219297C2E0090FC94 /* umscriptappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6835C7119297C2E0090FC94 /* umscriptappTests.m */; };
-		A6835C8619297E080090FC94 /* umscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6835C8519297E080090FC94 /* umscript.framework */; };
-		A6835C8719297E080090FC94 /* umscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6835C8519297E080090FC94 /* umscript.framework */; };
+		A68A0632192986EE0083C13F /* umscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68A0631192986EE0083C13F /* umscript.framework */; };
+		A68A0633192986EE0083C13F /* umscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68A0631192986EE0083C13F /* umscript.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		A6835C6F19297C2E0090FC94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6835C7119297C2E0090FC94 /* umscriptappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = umscriptappTests.m; sourceTree = "<group>"; };
 		A6835C7B19297CDE0090FC94 /* umscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = umscript.xcodeproj; path = ../umscript/umscript.xcodeproj; sourceTree = "<group>"; };
-		A6835C8519297E080090FC94 /* umscript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = umscript.framework; path = ../umscript/build/Debug/umscript.framework; sourceTree = "<group>"; };
+		A68A0631192986EE0083C13F /* umscript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = umscript.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6835C4519297C2E0090FC94 /* Cocoa.framework in Frameworks */,
-				A6835C8619297E080090FC94 /* umscript.framework in Frameworks */,
+				A68A0632192986EE0083C13F /* umscript.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6835C8719297E080090FC94 /* umscript.framework in Frameworks */,
+				A68A0633192986EE0083C13F /* umscript.framework in Frameworks */,
 				A6835C6819297C2E0090FC94 /* Cocoa.framework in Frameworks */,
 				A6835C6719297C2E0090FC94 /* XCTest.framework in Frameworks */,
 			);
@@ -118,7 +118,7 @@
 		A6835C4319297C2E0090FC94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6835C8519297E080090FC94 /* umscript.framework */,
+				A68A0631192986EE0083C13F /* umscript.framework */,
 				A6835C4419297C2E0090FC94 /* Cocoa.framework */,
 				A6835C6619297C2E0090FC94 /* XCTest.framework */,
 				A6835C4619297C2E0090FC94 /* Other Frameworks */,
@@ -467,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/afink/development/git/umscript/build/Debug,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "umscriptapp/umscriptapp-Prefix.pch";
@@ -484,6 +485,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/afink/development/git/umscript/build/Debug,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "umscriptapp/umscriptapp-Prefix.pch";
@@ -502,6 +504,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 					/Users/afink/development/git/umscript/build/Debug,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "umscriptapp/umscriptapp-Prefix.pch";
@@ -525,6 +528,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 					/Users/afink/development/git/umscript/build/Debug,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "umscriptapp/umscriptapp-Prefix.pch";
