@@ -70,6 +70,19 @@
     }
     theScript.sourceCode = inputField.stringValue;
     UMEnvironment *env = [[UMEnvironment alloc]init];
+    
+    
+    [env setVariable:[UMDiscreteValue discreteString:@"A"] forKey:@"$a"];
+    [env setVariable:[UMDiscreteValue discreteString:@"B"] forKey:@"$b"];
+    [env setVariable:[UMDiscreteValue discreteString:@"C"] forKey:@"$c"];
+    [env setVariable:[UMDiscreteValue discreteInt:123] forKey:@"$myint"];
+    [env setVariable:[UMDiscreteValue discreteBool:NO] forKey:@"$mybool"];
+    
+    [env setField:[UMDiscreteValue discreteString:@"F1"] forKey:@"%field1"];
+    [env setField:[UMDiscreteValue discreteString:@"F2"] forKey:@"%field2"];
+    [env setField:[UMDiscreteValue discreteString:@"F3"] forKey:@"%field3"];
+    [env setField:[UMDiscreteValue discreteString:@"BBB"] forKey:@"field4"];
+
     UMDiscreteValue *result = [theScript runScriptWithEnvironment:env];
     NSString *rs = [result stringValue];
     if(rs==NULL)
